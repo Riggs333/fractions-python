@@ -2,17 +2,23 @@ class Fraction:
 
     def __init__(self, integer_value) -> None:
         super().__init__()
+        self.integer_value = integer_value
 
     def plus(self, param):
         return self
 
     def int_value(self):
-        return 0
+        return self.integer_value
 
 
 def test_zero_plus_zero():
     sum = Fraction(0).plus(Fraction(0))
     assert sum.int_value() == 0
+
+
+def test_non_zero_plus_zero():
+    sum = Fraction(3).plus(Fraction(0))
+    assert sum.int_value() == 3
 
 
 """
