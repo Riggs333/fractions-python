@@ -6,7 +6,7 @@ class Fraction:
 
     def plus(self, param):
         if param.integer_value != 0:
-            return param
+            return Fraction(self.integer_value + param.integer_value)
         else:
             return self
 
@@ -27,6 +27,11 @@ def test_non_zero_plus_zero():
 def test_zero_plus_non_zero():
     sum = Fraction(0).plus(Fraction(5))
     assert sum.int_value() == 5
+
+
+def test_non_zero_operands():
+    sum = Fraction(3).plus(Fraction(4))
+    assert sum.int_value() == 7
 
 
 """
