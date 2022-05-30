@@ -8,7 +8,7 @@ class Fraction:
         if other.integer_value != 0:
             return Fraction(self.integer_value + other.integer_value)
         else:
-            return self
+            return Fraction(self.integer_value + other.integer_value)
 
     def int_value(self):
         return self.integer_value
