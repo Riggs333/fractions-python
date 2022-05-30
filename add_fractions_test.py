@@ -4,9 +4,9 @@ class Fraction:
         super().__init__()
         self.integer_value = integer_value
 
-    def plus(self, param):
-        if param.integer_value != 0:
-            return Fraction(self.integer_value + param.integer_value)
+    def plus(self, other):
+        if other.integer_value != 0:
+            return Fraction(self.integer_value + other.integer_value)
         else:
             return self
 
