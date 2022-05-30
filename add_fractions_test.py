@@ -5,10 +5,7 @@ class Fraction:
         self.integer_value = integer_value
 
     def plus(self, other):
-        if other.integer_value != 0:
-            return Fraction(self.integer_value + other.integer_value)
-        else:
-            return Fraction(self.integer_value + other.integer_value)
+        return Fraction(self.integer_value + other.integer_value)
 
     def int_value(self):
         return self.integer_value
