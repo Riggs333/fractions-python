@@ -1,11 +1,13 @@
 class Fraction:
 
-    def __init__(self, integer_value) -> None:
+    def __init__(self, integer_value, denominator=1) -> None:
         super().__init__()
+        self.denominator = denominator
+        self.nominator = integer_value
         self.integer_value = integer_value
 
     def plus(self, other):
-        return Fraction(self.integer_value + other.integer_value)
+        return Fraction(self.integer_value + other.integer_value, self.denominator)
 
     def int_value(self):
         return self.integer_value
@@ -31,9 +33,13 @@ def test_non_zero_operands():
     assert sum.int_value() == 7
 
 
-"""
-3 + 4 = 7
+def test_common_denominator():
+    sum = Fraction(1, 5).plus(Fraction(2, 5))
+    assert sum.nominator == 3
+    assert sum.denominator == 5
 
+
+"""
 -3 + 1 = -2
 
 1/5 + 2/5 = 3/5
