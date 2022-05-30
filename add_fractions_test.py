@@ -7,7 +7,8 @@ class Fraction:
     def plus(self, param):
         if param.integer_value != 0:
             return param
-        return self
+        else:
+            return self
 
     def int_value(self):
         return self.integer_value
@@ -29,7 +30,6 @@ def test_zero_plus_non_zero():
 
 
 """
-0 + 5 = 0
 3 + 4 = 7
 
 -3 + 1 = -2
